@@ -5,6 +5,7 @@ Lattice-Boltzmann code for fluid mechanics, with the implementation of the Shan-
 * This is a 3D LBM code in Fortran 90, with a Shan Chen model implementation that uses Guo's Forcing Scheme in order to simulate a 2 phase fluid that evolves a stationary capillary wave. 
 * Shan Chen model is a diffuse interface, bottom-up approach, meaning that the postulation of a microscopic interaction between fluid molecules, leads to a macroscopic separation of phase which implies a hyperbolic tangent-like transition of the density between one phase and the other. This way, surface tension is an emergent effect of the method. 
 * The initial conditions of the system (hyperbolic tangent parameters in iii.par file) are based on previous results from this code. 
+
 ![alt text](https://github.com/veneciachm/LatticeBoltzmannMethod/blob/master/CapillaryWave.gif)
 
 * ***This is a work in progress*** as part of my Masters Project. 
@@ -37,6 +38,8 @@ In order to execute the program (assuming you are at xxx/ directory) type:
 ./xCW
 ```
 Using the parameters in iii.par, the simulation will run for about 11 minutes (consider this serial version allows the usage of only one core).
+
+This example uses Lattice Units, it is possible to modify this in LD_Units.f90 and change it to physical (MKS system). 
 
 ### Plotting:
 To generate a movie, type from xxx/ :
