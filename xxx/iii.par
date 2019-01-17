@@ -1,0 +1,29 @@
+&CW_Input
+res_num     = 1
+xmin        = 0.
+xmax        = 2.0
+ymin        = 0.
+ymax        = 2.0
+zmin        = 0.
+zmax        =2.0
+Nxx         = 1
+Nyy         = 160
+Nzz         = 140
+every_0Dt   = 100.
+every_1Dt   = 100.
+every_2Dt   = 100.
+method      = '3DQ19'
+t_final     = 15000
+initial_data ='Initial_TanWave'
+tau         = 1.
+G           = -5.3
+rho_l       = 2.10784
+rho_g       = 0.07688
+A_tan       = 1.01548
+b           = 1.09236
+wdh         = 0.643116
+x0          = 70.0
+A_wave      = 3.0
+Wave_len    = 160
+/
+
