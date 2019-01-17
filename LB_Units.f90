@@ -16,9 +16,9 @@ subroutine LB_Units
     	dx=one
     	dy=one
     	dz=one
-	print*, '-------------------------------------------------------------------------'
-	print*, '------------------------ SPACE IN LATTICE UNITS -------------------------'
-	print*, '-TO CHANGE THIS GO TO LB_Units.f90 AND USE dx = (xmax - xmin)/dble(Nx-1)-'
+	!-------------------------------------------------------------------------
+	!------------------------ SPACE IN LATTICE UNITS -------------------------
+	!----------TO CHANGE THIS AND USE dx = (xmax - xmin)/dble(Nx-1)-----------
 
     
     	do h=1,Nz
@@ -33,16 +33,16 @@ subroutine LB_Units
 	!nu_dim is an input by te user
 	!dt = third*(tau-half)* (dx**2)/nu_dim	
 	dt=one
-	print*, '---------------------------------------------------------------------------------'
-	print*, '------------------------------TIME  IN LATTICE UNITS-----------------------------'
-	print*, '-TO CHANGE THIS GO TO LB_Units.f90 AND USE dt = third*(tau-half)* (dx**2)/nu_dim-'
+	!---------------------------------------------------------------------------------
+	!------------------------------TIME  IN LATTICE UNITS-----------------------------
+	!--------------TO CHANGE THIS USE dt = third*(tau-half)* (dx**2)/nu_dim-----------
 
 
 	Nt = t_final/dt 
   	
   	!Cu= dx/dt
   	Cu=one 
-  	print*, '---------Results in LATTICE UNITS, go to LB_Units and use Cu= dx/dt -------------'
+  	print*, '---------Results in LATTICE UNITS, to change this go to LB_Units.f90 -------------'
 
   	every_0D = int(every_0Dt/dt)	!This three lines, so it calls----------------
     	every_1D = int(every_1Dt/dt) 	!the Save-subroutines, at the-----------------
