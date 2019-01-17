@@ -1,6 +1,10 @@
 # LatticeBoltzmannMethod
 Lattice-Boltzmann code for fluid mechanics, with the implementation of the Shan-Chen model for multiphase simulations of capillary waves at liquid-vapor interfaces.
 
+### Author: Venecia Chávez Medina
+* **Affiliation**: Institute of Physics and Mathematics, Universidad Michoacana de San Nicolás de Hidalgo Mexico.
+* **Email**: veneciachm(*at*)ifm.umich.mx
+
 ## Project:
 * This is a 3D LBM code in Fortran 90, with a Shan Chen model implementation that uses Guo's Forcing Scheme in order to simulate a 2 phase fluid that evolves a stationary capillary wave. 
 * Shan Chen model is a diffuse interface, bottom-up approach, meaning that the postulation of a microscopic interaction between fluid molecules, leads to a macroscopic separation of phase which implies a hyperbolic tangent-like transition of the density between one phase and the other. This way, surface tension is an emergent effect of the method. 
