@@ -6,23 +6,23 @@ FFLAGS = -O3
 
 LNK=gfortran
 
-OBJS = evolve.o initial.o main.o ShanChenForce.o  save1Dz.o save0D.o save1Dx.o save1Dy.o save2Dxy.o memory.o collision.o hydro_variables.o LB_Units.o save2Dyz.o save2Dzx.o  saveVFieldxy.o saveInterface_Position$
-
+OBJS = evolve.o initial.o main.o ShanChenForce.o  save1Dz.o save0D.o save1Dx.o save1Dy.o save2Dxy.o memory.o collision.o hydro_variables.o LB_Units.o save2Dyz.o save2Dzx.o saveVFieldxy.o saveInterface_Position.o saveEscalar.o
 MODS = arrays.o global_numbers.o
 
 $(OBJS):        $(MODS)
 
 CW:     $(OBJS) $(MODS)
-                $(LNK) $(FFLAGS) -o xCW $(OBJS) $(MODS)
-        @ mkdir -p xxx
-        @ mv xCW xxx
-
+		$(LNK) $(FFLAGS) -o xCW $(OBJS) $(MODS) 
+	@ mkdir -p xxx
+	@ mv xCW xxx
 
 .PHONY: clean
 
 clean:
-        -rm -f *.o *.mod xxx/xCW xxx/*.x xxx/*.t xxx/*.y xxx/*.xy xxx/*.yz xxx/*.vxy
+	-rm -f *.o *.mod xxx/xCW xxx/*.x xxx/*.t xxx/*.y xxx/*.xy xxx/*.yz xxx/*.vxy
 
 %.o : %.f90
-        $(FC) -c $(FFLAGS) $< -o $@
+	$(FC) -c $(FFLAGS) $< -o $@
+
+
 
